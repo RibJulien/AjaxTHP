@@ -1,4 +1,4 @@
-# THP - Week8 - Project3 -  Projet : To do List with Ajax
+# THP - AJAX V2
 ## Julien Ribeaucourt
 
 ### Notes & Use
