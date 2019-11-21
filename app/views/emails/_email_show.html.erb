@@ -1,8 +1,8 @@
 <div class="text-center" style="background-color: #eee; margin-left: 0px;">
-	Objet de l'email : <%= @email.object %>
+	Objet de l'email : <%= email.object %>
 	<hr>
-	Contenu de l'email : <%=@email.body %>
+	Contenu de l'email : <%=email.body %>
 	<br><br>
-	<button class="btn btn-danger">Suprimer</button>
+	<%= link_to "Supprimer", email_path(email.id), method: "delete", class: "btn btn-danger"  %>
 	<button class="btn btn-secondary">Marquer comme non-lu</button>
 </div>
