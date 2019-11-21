@@ -1,0 +1,29 @@
+<div id="email_show">
+</div>
+
+<div class="form">
+  <%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
+  <%= submit_tag 'Recevoir un email'%>
+  <% end %>
+</div>
+<br>
+<% a = 0 %>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">Objet</th>
+      <th scope="col">Contenu</th>
+    </tr>
+  </thead>
+  <tbody id="email_list" >
+    <tr>
+    	<% @emails.all.each do |email| %>
+      <td> <a class="btn btn-info"  <%= link_to email.object, email_path(email.id), remote: true%> </td>
+      <td id="email-body-<%=email.id%>"></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
